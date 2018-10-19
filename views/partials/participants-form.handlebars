@@ -1,0 +1,33 @@
+<!-- views/partials/studies-form.handlebars -->
+
+<fieldset>
+  <legend>Edit/Add Participant</legend>
+  <!-- Name -->
+  <div class="form-group">
+    <label for="participant-name">Name</label><br>
+    <input class="form-control" id="participant-name" type="text" name="name" value="{{participant.name}}"/>
+  </div>
+
+
+  <!-- Age -->
+  <div class="form-group">
+    <label for="participant-age">Age</label><br>
+    <input class="form-control" id="participant-age" type="number" name="age" min="1" value={{participant.age}}/>
+  </div>
+
+  <!-- Sex -->
+  <div class="form-group">
+      <label for = "participant-sex">Sex</label><br>
+      <select class="participant-sex" name ="sex">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+      </select>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="form-group">
+    <label for="participant-contact">Contact Info: Email</label><br>
+    <input class="form-control" id="participant-contact" type="text" name="contact" value="{{participant.contact}}"/>
+  </div>
+</fieldset>

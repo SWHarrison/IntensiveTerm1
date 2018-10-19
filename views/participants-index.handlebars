@@ -1,0 +1,18 @@
+<!-- views/participants-index.handlebars -->
+<a href="/">Back to Home</a>
+
+<h1>Participants</h1>
+
+
+<a href="/participants/new">New Participant</a>
+
+<div class="row">
+  {{#each participants}}
+    <div class="col-sm-12">
+      <small><a href="/participants/{{this._id}}">{{this.name}}</a></small>
+      <small>{{this.age}}</small>
+      <small>{{this.sex}}</small>
+      <!--<small>{{this.contact}}</small>-->
+    </div>
+  {{/each}}
+</div>

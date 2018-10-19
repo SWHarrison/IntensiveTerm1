@@ -1,0 +1,15 @@
+<!-- views/participants-new.handlebars -->
+
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <form method="POST" action="/participants">
+      {{> participants-form}}
+      <!-- BUTTON -->
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Save Participant</button>
+        <!-- BUTTON -->
+        <input type="button" onclick="location.href='/';" value="Cancel Changes" />
+      </div>
+    </form>
+  </div>
+</div>

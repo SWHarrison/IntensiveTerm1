@@ -1,0 +1,17 @@
+<!-- views/studies-index.handlebars -->
+<a href="/">Back to Home</a>
+
+<h1>Studies</h1>
+
+
+<a href="/studies/new">New Study</a>
+
+<div class="row">
+  {{#each studies}}
+    <div class="col-sm-12">
+      <small><a href="/studies/{{this._id}}">{{this.public_name}}</a></small>
+      <small>{{this.public_description}}</small>
+      <!--<small>{{this.link}}</small>-->
+    </div>
+  {{/each}}
+</div>

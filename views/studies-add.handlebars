@@ -1,0 +1,15 @@
+<!-- views/studies-add.handlebars -->
+<a href="/studies/{{study._id}}">Back to Study</a>
+
+<h1>Participants not in Study</h1>
+
+<div class="row">
+  {{#each participants}}
+    <div class="col-sm-12">
+      <small>{{this.name}}</a></small>
+      <small>{{this.age}}</small>
+      <small>{{this.sex}}</small>
+      <!--<small>{{this.contact}}</small>-->
+    </div>
+  {{/each}}
+</div>

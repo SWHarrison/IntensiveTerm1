@@ -1,0 +1,15 @@
+<!-- views/participants-show.handlebars -->
+
+<a href="/participants/index">Back to List</a>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h1>{{participant.name}}</h1>
+    <p>{{participant.age}}</p>
+    <p>{{participant.sex}}</p>
+    <p>{{participant.contact}}</p>
+    <p><a href="/participants/{{participant._id}}/edit">Edit</a></p>
+    <p><form method="POST" action="/participants/{{participant._id}}?_method=DELETE">
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </form></p>
+  </div>
+</div>

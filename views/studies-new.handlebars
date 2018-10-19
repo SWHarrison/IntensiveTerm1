@@ -1,0 +1,15 @@
+<!-- views/studies-new.handlebars -->
+
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <form method="POST" action="/studies">
+      {{> studies-form}}
+      <!-- BUTTON -->
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Save Study</button>
+        <!-- BUTTON -->
+        <input type="button" onclick="location.href='/';" value="Cancel Changes" />
+      </div>
+    </form>
+  </div>
+</div>

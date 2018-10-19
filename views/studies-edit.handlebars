@@ -1,0 +1,14 @@
+<!-- views/studies-edit.handlebars -->
+
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <form method="POST" action="/studies/{{study._id}}?_method=PUT">
+      {{> studies-form}}
+      <!-- BUTTON -->
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Save Study</button>
+        <input type="button" onclick="location.href='/studies/{{study._id}}';" value="Save Changes" />
+      </div>
+    </form>
+  </div>
+</div>

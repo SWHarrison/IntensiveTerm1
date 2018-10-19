@@ -1,0 +1,50 @@
+<a href="/studies/{{study._id}}">Back to Study</a>
+
+<form method="POST" action="/studies/{{study._id}}/request/participants">
+
+<fieldset>
+  <legend>Participant Request Parameters</legend>
+
+  <h4>Study: {{study.public_name}}</h4>
+  <p>Description: {{study.public_description}}</p>
+
+  <!-- Age -->
+  <div class="form-group">
+    <label for="minimumAge">Minimum Age of Participant</label><br>
+    <input class="form-control" id="minimumAge" type="number" name="minimumAge" min="1" max="999"/>
+  </div>
+
+  <div class="form-group">
+    <label for="maximumAge">Maximum Age of Participant</label><br>
+    <input class="form-control" id="maximumAge" type="number" name="maximumAge" max="999"/>
+  </div>
+
+  <div class="form-group">
+      <label for="sex">Filter Sexes</label><br>
+      <input type="checkbox" name="sex" value="male">Males<br>
+      <input type="checkbox" name="sex" value="female">Females<br>
+      <input type="checkbox" name="sex" value="other">Others<br>
+  </div>
+
+  <!--<div class="form-group">
+      <label for="numRequest">Number of Requested Participants</label><br>
+      <input class="form-control" id="numRequest" type="number" name="numRequest" min="1"/>
+  </div>-->
+
+  <!-- Add to or New group of participants
+  <div class="form-group">
+      <label for = "addOrNew">Add to existing group or request new group of participants?</label><br>
+      <select class="addOrNew" name ="addOrNew">
+          <option value="add">Add</option>
+          <option value="new">New</option>
+      </select>
+  </div>-->
+
+
+ <button class="btn btn-primary" type="submit">Request Participants</button>
+
+
+
+</fieldset>
+
+</form>

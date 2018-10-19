@@ -1,0 +1,39 @@
+<!-- views/studies-show.handlebars -->
+
+<a href="/studies/index">Back to List</a>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h1>{{study.public_name}}</h1>
+    <p>{{study.public_description}}</p>
+    <p>Number of Participants: {{study.number_of_participants}}</p>
+
+    <div class="row">
+      {{#each participants}}
+        <div class="col-sm-12">
+          <small>{{this.name}}</small>
+          <small>{{this.age}}</small>
+          <small>{{this.sex}}</small>
+          <small>{{this.contact}}</small>
+        </div>
+      {{/each}}
+    </div>
+
+    <p>Link to survey: {{study.link}}</p>
+
+    <p>{{study.completion_notes}}</p>
+    <p><a href="/studies/{{study._id}}/edit">Edit</a></p>
+
+    <p><form method="POST" action="/studies/{{study._id}}?_method=DELETE">
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </form></p>
+
+    <p><form method="GET" action="/studies/{{study._id}}/request">
+        <button class="btn btn-primary" type="submit">Request Participants</button>
+    </form></p>
+
+    <p><form method="GET" action="/studies/{{study._id}}/complete">
+        <button class="btn btn-primary" type="submit">Finish Study</button>
+        </form>
+    </p>
+  </div>
+</div>
